@@ -60,3 +60,17 @@ alter table user_logs
 select * from user_logs;
 
 desc user_logs;
+
+create table todos
+(
+    id          bigint       not null auto_increment,
+    user_id     varchar(100) not null,
+    title       varchar(100) not null,
+    description text         null,
+    created_at  timestamp    not null default current_timestamp,
+    updated_at  timestamp    not null default current_timestamp on update current_timestamp,
+    deleted_at  timestamp    null,
+    primary key (id)
+) engine = innodb;
+
+select * from todos;
