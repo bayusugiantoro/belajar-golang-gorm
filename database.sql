@@ -33,3 +33,5 @@ select * from users;
 select * from users;
 
 delete from users where id = '1'
+
+select * from users;
